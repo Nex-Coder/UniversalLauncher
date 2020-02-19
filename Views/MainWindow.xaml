@@ -1,0 +1,29 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="clr-namespace:UniversalLauncher.ViewModels;assembly=UniversalLauncher"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        x:Name="MainWindow"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="UniversalLauncher.Views.MainWindow"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="UniversalLauncher"
+        MinWidth="672" MinHeight="378">
+  
+  
+  <DockPanel>
+    <!--Top Panel -->
+    
+    <!--Left Side Bar Panel -->
+    <Panel x:Name="SideBar" MinWidth="75" MaxWidth="75" Background="#212020">
+      <TextBlock>Left Panel</TextBlock>
+    </Panel>
+
+    <!--Center Panel-->
+    <Panel x:Name="MainContent" Background="#414040">
+        <Button Content="X"  Command="{Binding CloseWin}" CommandParameter="{Binding ElementName=MainWindow}" Width="100" Height="40"/>
+        <Image Width="22"  Source="/Assets/Images/nexus.png"/>
+      </Panel>
+    
+  </DockPanel>
+</Window>
